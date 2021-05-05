@@ -1,0 +1,7 @@
+<div class="well cereal">
+    <a href="/cereals/{{ cereal.id }}">
+        <img class="cereal-img" src="{{ cereal.cerealimage_set.first.image }}"/>
+        <h4>{{ cereal.name }}</h4>
+        <p>{{ cereal.description }}</p>
+    </a>
+</div>

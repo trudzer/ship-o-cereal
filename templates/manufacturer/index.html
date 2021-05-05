@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Manufacturer</h1>
+    <div class="manufacturers">
+        {% for manufacturer in manufacturers %}
+            {% include "manufacturer/single_manufacturer.html" with manufacturer=manufacturer %}
+        {% endfor %}
+    </div>
+{% endblock %}

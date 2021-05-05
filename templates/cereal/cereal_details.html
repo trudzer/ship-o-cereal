@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ cereal.name }}</h1>
+    <p>{{ cereal.description }}</p>
+    <p>${{ cereal.price }}</p>
+    <p>Manufacturer: {{ cereal.manufacturer.name }}</p>
+    <img class="cereal-img" src="{{ cereal.cerealimage_set.first.image }}"/>
+    {% if user.is_superuser %}
+    <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Delete cereal</a>
+    <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Update cereal</a>
+    {% endif %}
+{% endblock %}

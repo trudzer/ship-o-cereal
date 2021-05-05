@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="red">Cereals collection</h1>
+    <div class="cereals">
+        {% for cereal in cereals %}
+            {% include 'cereal/single_cereal.html' with  cereal=cereal %}
+        {% endfor %}
+    </div>
+{% endblock %}
