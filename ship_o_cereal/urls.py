@@ -24,5 +24,6 @@ urlpatterns = [
     path('cereals/', include('cereal.urls')),
     path('manufacturers/', include('manufacturer.urls')),
     path('user/', include('user.urls')),
-    path('contact_us/', views.contact_us, name="contact_us")
+    path('contact_us/', views.contact_us, name="contact_us"),
+    path('about_us/',views.about_us, name="about_us")
 ]
