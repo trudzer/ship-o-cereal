@@ -3,7 +3,7 @@ body {
 }
 
 .cereal {
-    height: 400px;
+    height: 33%;
     float: left;
     width: 50%; /* three boxes (use 25% for four, and 50% for two, etc) */
     padding: 50px; /* if you want space between the images */

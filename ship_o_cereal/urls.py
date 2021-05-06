@@ -1,4 +1,4 @@
-"""candyQueen2 URL Configuration
+"""ship O'Cereal URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -24,5 +24,6 @@ urlpatterns = [
     path('cereals/', include('cereal.urls')),
     path('manufacturers/', include('manufacturer.urls')),
     path('user/', include('user.urls')),
-    path('contact_us/', views.contact_us, name="contact_us")
+    path('contact_us/', views.contact_us, name="contact_us"),
+    path('feedback/', views.feedback, name="feedback")
 ]

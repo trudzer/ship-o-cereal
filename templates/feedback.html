@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="red">Feedback</h1>
+    <div class="feedback">
+        {% for feedback in feedbacks %}
+            {% include 'single_feedback.html' with  feedback=feedback %}
+        {% endfor %}
+    </div>
+{% endblock %}

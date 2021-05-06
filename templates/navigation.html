@@ -27,6 +27,9 @@
             <li><a href="{% url 'register' %}">Register</a></li>
         {% endif %}
         <li><a href=" {% url 'contact_us' %}">Contact Us</a></li>
+        {% if user.is_superuser %}
+        <li><a href=" {% url 'feedback' %}">Feedback</a></li>
+        {% endif %}
         {% if request.get_full_path == "/" or request.get_full_path == "/cereals/" %}
         <div class="input-group">
             <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.." />
