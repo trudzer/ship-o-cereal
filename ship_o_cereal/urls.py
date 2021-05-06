@@ -25,5 +25,13 @@ urlpatterns = [
     path('manufacturers/', include('manufacturer.urls')),
     path('user/', include('user.urls')),
     path('contact_us/', views.contact_us, name="contact_us"),
+<<<<<<< Updated upstream
     path('feedback/', views.feedback, name="feedback")
+=======
+
+
+
+    path('feedback/', views.feedback, name="feedback")
+
+>>>>>>> Stashed changes
 ]

@@ -3,7 +3,7 @@ body {
 }
 
 .cereal {
-    height: 33%;
+    height: 450px;
     float: left;
     width: 50%; /* three boxes (use 25% for four, and 50% for two, etc) */
     padding: 50px; /* if you want space between the images */
@@ -31,7 +31,7 @@ body {
 .cereal-img {
     max-width: 250px;
     max-height: 250px;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .manufacturer-img {
@@ -87,6 +87,21 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #fff792;
   padding: 20px;
+<<<<<<< Updated upstream
+=======
+}
+.about_us-img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.container-fluid {
+    background-color: #fff792;
+}
+
+.red {
+    text-align: center;
+>>>>>>> Stashed changes
 }
