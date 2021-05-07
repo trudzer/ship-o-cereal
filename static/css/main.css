@@ -101,7 +101,7 @@ input[type=text], select, textarea {
     left: 5px;
     background-image: linear-gradient(#eebb3d, #ffdd6c);
     border-color: black;
-    height: 200px;
+    height: 220px;
     width: 140px;
 }
 
@@ -117,6 +117,10 @@ input[type=radio] {
     bottom: 5px;
     vertical-align: middle;
     right: 5px;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    color: black;
+    cursor: pointer;
 }
 
 /* Style the submit button with a specific background color etc */
