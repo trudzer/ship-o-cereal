@@ -26,3 +26,5 @@ def feedback(request):
     #return JsonResponse({ 'data': feedbacks })
     context = {'feedbacks': ContactUs.objects.all().order_by('id')}
     return render(request, 'feedback.html', context)
+def about_us(request):
+    return render(request, 'about_us.html')
