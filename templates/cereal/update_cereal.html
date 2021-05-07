@@ -5,9 +5,11 @@
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Update" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0"/>
+        <p>Copyright © 2021 Ship O'Cereal</p>
     </form>
     {% else %}
         <h4>Invalid input</h4>
         <img src="https://img-16.ccm2.net/_SqzzXVDSG50FWb_UBrCl3XwV78=/440x/1685e17045e747a899925aa16189c7c6/ccm-encyclopedia/99776312_s.jpg">
+    <p>Copyright © 2021 Ship O'Cereal</p>
     {% endif %}
 {% endblock %}

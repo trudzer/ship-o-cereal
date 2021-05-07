@@ -2,7 +2,9 @@
 {% block content %}
     <form method="post" class="form form-horizontal">
         {% csrf_token %}
+        <h1 class="red">Login</h1>
         {{ form }}
     <input type="submit" class="btn btn-primary" value="login" />
+    <p>Copyright © 2021 Ship O'Cereal</p>
     </form>
 {% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="red">Feedback</h1>
+    <div class="feedback">
+        {% for feedback in feedbacks %}
+            {% include 'contact_us/single_feedback.html' with  feedback=feedback %}
+        {% endfor %}
+    </div>
+    <p>Copyright © 2021 Ship O'Cereal</p>
+{% endblock %}

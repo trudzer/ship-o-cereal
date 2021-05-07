@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'contact_us' %}" method="post">
+        {% csrf_token %}
+        <h1 class="red">Contact us</h1>
+        {{ form }}
+        <input type="submit" value="Send" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0"/>
+    </form>
+    <p>Copyright © 2021 Ship O'Cereal</p>
+{% endblock %}

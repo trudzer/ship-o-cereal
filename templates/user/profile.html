@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Profile</h1>
+    <h1 class="red">Profile</h1>
     <form class="form form-horizontal" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" onclick="myScript()" class="btn btn-primary" value="Update" />
+    <p>Copyright © 2021 Ship O'Cereal</p>
     </form>
     <script>function myScript(){alert("Profile updated");}</script>
 {% endblock %}

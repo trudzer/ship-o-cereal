@@ -9,29 +9,29 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-          <img src="https://i.ibb.co/XWpML4b/ship-Ocereal-Logo.png" alt="Ship O'Cereal Logo" height="30px" width="120px" class="logo-img">
+          <img src="https://i.ibb.co/8M1VcVw/ship-Ocereal-Logo-small.png" alt="Ship O'Cereal Logo" height="30px" width="120px" class="logo-img">
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="{% url 'cereal-index' %}">Cereal<span class="sr-only">(current)</span></a></li>
-        <li><a href=" {% url 'about_us' %}">About us</a></li>
+        <li><a href="{% url 'cereal-index' %}" class="link-bar">Cereal<span class="sr-only">(current)</span></a></li>
+        <li><a href=" {% url 'about_us' %}" class="link-bar">About us</a></li>
         {% if user.is_superuser %}
-            <li><a href="{% url 'create_cereal' %}">Create cereal</a></li>
-            <li><a href="{% url 'manufacturer-index' %}">Manufacturers</a></li>
+            <li><a href="{% url 'create_cereal' %}" class="link-bar">Create cereal</a></li>
+            <li><a href="{% url 'manufacturer-index' %}" class="link-bar">Manufacturers</a></li>
         {% endif %}
         {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'profile' %}" class="link-bar">Profile</a></li>
+            <li><a href="{% url 'logout' %}" class="link-bar">Logout</a></li>
         {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}" class="link-bar">Login</a></li>
+            <li><a href="{% url 'register' %}" class="link-bar">Register</a></li>
         {% endif %}
-        <li><a href=" {% url 'contact_us' %}">Contact Us</a></li>
+        <li><a href=" {% url 'contact_us' %}" class="link-bar">Contact Us</a></li>
         {% if user.is_superuser %}
-        <li><a href=" {% url 'feedback' %}">Feedback</a></li>
+        <li><a href=" {% url 'feedback' %}" class="link-bar">Feedback</a></li>
         {% endif %}
         {% if request.get_full_path == "/" or request.get_full_path == "/cereals/" %}
         <div class="input-group">
@@ -42,7 +42,7 @@
         </div>
         {% endif %}
         {% if user.is_authenticated %}
-            <a href="{% url 'profile' %}">
+            <a href="{% url 'profile' %}" class="link-bar">
                 <img src="{{ user.profile.profile_image }}" class="navbar profile-image" />
             </a>
       {% endif %}

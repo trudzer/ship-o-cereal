@@ -8,5 +8,6 @@
     {% if user.is_superuser %}
     <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Delete cereal</a>
     <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Update cereal</a>
+    <p>Copyright © 2021 Ship O'Cereal</p>
     {% endif %}
 {% endblock %}

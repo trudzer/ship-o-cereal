@@ -15,7 +15,21 @@ def index(request):
             'name': x.name,
             'description': x.description,
             'firstImage': x.cerealimage_set.first().image,
+            'price': x.price,
+            'category': x.category.name
         } for x in Cereal.objects.filter(name__icontains=search_filter) ]
+        return JsonResponse({ 'data': cereals })
+
+    if 'category_filter' in request.GET:
+        category_filter = request.GET['category_filter']
+        cereals = [ {
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'firstImage': x.cerealimage_set.first().image,
+            'price': x.price,
+            'category': x.category.name
+        } for x in  Cereal.objects.filter(category=category_filter) ]
         return JsonResponse({ 'data': cereals })
     context = {'cereals': Cereal.objects.all().order_by('name')}
     return render(request, 'cereal/index.html', context)

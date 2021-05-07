@@ -1,9 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1 class="red">Cereals collection</h1>
+    <div class="well quickbar">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="vegan-button">
+        <label class="form-check-label radio-label" for="vegan-button">Vegan</label>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="wheat-button">
+        <label class="form-check-label radio-label" for="wheat-button">Wheat</label>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="oats-button">
+        <label class="form-check-label radio-label" for="oats-button">Oats</label>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="sugary-button">
+        <label class="form-check-label radio-label" for="sugary-button">Sugary</label>
+    </div>
     <div class="cereals">
         {% for cereal in cereals %}
             {% include 'cereal/single_cereal.html' with  cereal=cereal %}
         {% endfor %}
+        <p>Copyright © 2021 Ship O'Cereal</p>
     </div>
 {% endblock %}
