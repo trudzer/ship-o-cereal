@@ -1,14 +1,25 @@
 body {
-    background-color: #f0ad4e;
+    background-color: #ffffff;
 }
 
 .cereal {
-    height: 33%;
+
+    height: 50%;
     float: left;
     width: 50%; /* three boxes (use 25% for four, and 50% for two, etc) */
-    padding: 50px; /* if you want space between the images */
+    padding: 5px; /* if you want space between the images */
     box-sizing: border-box;
     border-bottom: solid 5px rgba(155, 155, 155, .5);
+}
+
+.well.cereal{
+    background-image: linear-gradient(#eebb3d, #ffdd6c);
+    border-color: black;
+}
+
+.well.feedback{
+    background-image: linear-gradient(#eebb3d, #ffdd6c);
+    border-color: black;
 }
 
 .container {
@@ -26,12 +37,15 @@ body {
     padding: 50px; /* if you want space between the images */
     box-sizing: border-box;
     border-bottom: solid 5px rgba(155, 155, 155, .5);
+    background-image: linear-gradient(#eebb3d, #ffdd6c);
+    border-color: black;
 }
 
 .cereal-img {
+    width:35%;
+    height: 75%;
     max-width: 250px;
     max-height: 250px;
-    border: 2px solid black;
 }
 
 .manufacturer-img {
@@ -46,10 +60,14 @@ body {
 
 .profile-image {
     height: 48px;
-    position:fixed;
+    position: fixed;
     right:30px;
     top:1px;
     border: solid 2px rgba(155, 155, 155, .5);
+}
+
+.logo-img {
+    top: 1px;
 }
 
 #id_message {
@@ -84,13 +102,38 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
+h4 span {
+    display: inline;
+}
+
+h4 span.major {
+    font-size: 18px;
+}
+
+h4 span.minor {
+    font-size: 12px;
+}
+
+.about_us-img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
+  background-color: #fff792;
   padding: 20px;
 }
 .about_us-img {
     max-width: 500px;
     max-height: 500px;
+}
+
+.container-fluid {
+    background-color: #fff792;
+}
+
+.red {
+    text-align: center;
 }

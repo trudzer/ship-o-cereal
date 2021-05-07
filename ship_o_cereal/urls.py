@@ -25,7 +25,12 @@ urlpatterns = [
     path('manufacturers/', include('manufacturer.urls')),
     path('user/', include('user.urls')),
     path('contact_us/', views.contact_us, name="contact_us"),
+<<<<<<< HEAD
     path('about_us/', views.about_us, name="about_us"),
     path('feedback/', views.feedback, name="feedback")
 
+=======
+    path('feedback/', views.feedback, name="feedback"),
+    path('about_us/',views.about_us, name="about_us")
+>>>>>>> afe041ad9baf721f99b95ffbd1010971528bed44
 ]

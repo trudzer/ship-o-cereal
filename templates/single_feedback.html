@@ -1,5 +1,7 @@
 <div class="well feedback">
-    <h3>Name: {{ contact_form.name }}</h3>
-    <p>Email: {{ contactus.email }}</p>
-    <p>Message: {{ contactus.message }}</p>
+    <h4>
+        <span class="major">{{ feedback.name }}</span>
+        <span class="minor">({{ feedback.email }})</span>
+    </h4>
+    <p>{{ feedback.message  }}</p>
 </div>
