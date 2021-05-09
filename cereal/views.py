@@ -31,6 +31,19 @@ def index(request):
             'category': x.category.name
         } for x in  Cereal.objects.filter(category=category_filter) ]
         return JsonResponse({ 'data': cereals })
+
+    if 'price_start' in request.GET:
+        price_start = request.GET['price_start']
+        price_end = request.GET['price_end']
+        cereals = [ {
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'firstImage': x.cerealimage_set.first().image,
+            'price': x.price,
+            'category': x.category.name
+        } for x in  Cereal.objects.filter(price__range=(price_start, price_end)) ]
+        return JsonResponse({ 'data': cereals })
     context = {'cereals': Cereal.objects.all().order_by('name')}
     return render(request, 'cereal/index.html', context)
 

@@ -15,6 +15,11 @@
         <a class="radio-label">
             <span id="sugary-button">Sugary</span>
         </a>
+        <input type="search" class="form-control price-box" id="price-box" placeholder="Min price.." />
+        <input type="search" class="form-control price-box" id="price-box-2" placeholder="Max price.." />
+        <div class="input-group-btn">
+            <button type="submit" id="price-btn" class="btn btn-default price-box">Search</button>
+        </div>
     </div>
     <div class="cereals">
         {% for cereal in cereals %}

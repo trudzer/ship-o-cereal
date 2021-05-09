@@ -101,7 +101,7 @@ input[type=text], select, textarea {
     left: 5px;
     background-image: linear-gradient(#eebb3d, #ffdd6c);
     border-color: black;
-    height: 220px;
+    height: 330px;
     width: 140px;
 }
 
@@ -110,6 +110,10 @@ input[type=radio] {
 	display: block;
 	line-height: 25px;
     right: 5px;
+}
+
+.price-box {
+    margin-top: 5px;
 }
 
 .radio-label {
