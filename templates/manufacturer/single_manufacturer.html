@@ -1,5 +1,7 @@
 <div class="well manufacturer">
-    <img class="manufacturer-img" src="{{ manufacturer.logo }}"/>
-    <h4>{{ manufacturer.name }}</h4>
-    <p>Started: {{ manufacturer.year_of_start }}</p>
+    <a href="{{ manufacturer.homepage }}">
+        <img class="manufacturer-img" src="{{ manufacturer.logo }}"/>
+        <h4>{{ manufacturer.name }}</h4>
+        <p>Started: {{ manufacturer.year_of_start }}</p>
+    </a>
 </div>

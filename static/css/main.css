@@ -24,6 +24,15 @@ body {
     border: 2px solid black;
     margin-left: 150px;
     width: 82%;
+    margin-top: -2px;
+}
+
+.messages-alert {
+    position: fixed;
+    top: 75px;
+    right: 300px;
+    width: 50%;
+    background-color: white;
 }
 
 @media screen and (max-width: 992px) {

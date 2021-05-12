@@ -33,6 +33,7 @@
         {% if user.is_superuser %}
         <li><a href=" {% url 'feedback' %}" class="link-bar">Feedback</a></li>
         {% endif %}
+        {% comment %}<li><a class="link-bar" href="{% url 'cart' %}">Cart</a></li> {% endcomment %}
         {% if request.get_full_path == "/" or request.get_full_path == "/cereals/" %}
         <div class="input-group">
             <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.." />

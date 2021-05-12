@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'manufacturer.apps.ManufacturerConfig',
     'user.apps.UserConfig',
     'contact_form.apps.ContactFormConfig',
+    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [

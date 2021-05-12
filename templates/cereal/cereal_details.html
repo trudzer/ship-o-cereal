@@ -9,8 +9,7 @@
     <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Delete cereal</a>
     <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Update cereal</a>
     {% endif %}
-    <a href="/user/profile">
-    <button type="submit" class="block btn btn-primary" style="clear:both; margin: 10px 0">Buy ${{ cereal.price }}</button>
-    </a>
+    <a href="{% url 'add_to_cart' cereal.id %}" class="block btn btn-primary">Buy ${{ cereal.price }}</a>
+    <a href="{% url 'remove_from_cart' cereal.id %}" class="block btn btn-primary">Remove from cart</a>
     <p>Copyright © 2021 Ship O'Cereal</p>
 {% endblock %}

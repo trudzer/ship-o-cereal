@@ -1,4 +1,8 @@
 from django.db import models
+from django.http import request
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
+
 from manufacturer.models import Manufacturer
 
 # Create your models here.

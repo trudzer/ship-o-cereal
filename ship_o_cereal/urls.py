@@ -26,5 +26,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('contact_us/', views.contact_us, name="contact_us"),
     path('feedback/', views.feedback, name="feedback"),
-    path('about_us/',views.about_us, name="about_us")
+    path('about_us/', views.about_us, name="about_us"),
+    path('cart/', include('cart.urls'))
 ]
