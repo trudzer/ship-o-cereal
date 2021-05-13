@@ -29,15 +29,35 @@ body {
 
 .messages-alert {
     position: fixed;
-    top: 75px;
-    right: 300px;
-    width: 50%;
+    top: 105px;
+    right: 200px;
+    width: 20%;
     background-color: white;
+}
+
+@media screen and (max-width: 1062px) {
+    .quickbar {
+        margin-top: 25px;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .container {
         width: 67%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quickbar {
+        margin-top: 300px;
+    }
+
+    .container {
+        padding-top: 200px;
+    }
+
+    .profile-image {
+        display: none;
     }
 
     .cereal {
@@ -92,6 +112,10 @@ body {
 #id_message {
     height: 150px;
     margin-bottom: 5px;
+}
+
+tr {
+    background-image: linear-gradient(#eebb3d, #ffdd6c);
 }
 
 input[type=text], select, textarea {
@@ -167,7 +191,7 @@ h4 span.minor {
     background-color: #000000;
     background-color: #fff792;
     padding: 20px;
-    padding-top: 50px;
+    padding-top: 75px;
 }
 .about_us-img {
     max-width: 500px;

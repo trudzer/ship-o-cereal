@@ -14,7 +14,7 @@ function search_item(){
                                 <a href="/cereals/${d.id}">
                                     <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">More Information</button>
                                 </a>
-                                <a href="/user/profile">
+                                <a href="/cart/add_to_cart/${d.id}">
                                 <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">Buy $${d.price}</button>
                                 </a>
                                 <p>Copyright © 2021 Ship O'Cereal</p>
@@ -46,7 +46,7 @@ function price_item(){
                                 <a href="/cereals/${d.id}">
                                     <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">More Information</button>
                                 </a>
-                                <a href="/user/profile">
+                                <a href="/cart/add_to_cart/${d.id}">
                                 <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">Buy $${d.price}</button>
                                 </a>
                                 <p>Copyright © 2021 Ship O'Cereal</p>
@@ -76,7 +76,7 @@ function search_button(category){
                                 <a href="/cereals/${d.id}">
                                     <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">More Information</button>
                                 </a>
-                                <a href="/user/profile">
+                                <a href="/cart/add_to_cart/${d.id}">
                                 <button type="submit" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0">Buy $${d.price}</button>
                                 </a>
                                 <p>Copyright © 2021 Ship O'Cereal</p>

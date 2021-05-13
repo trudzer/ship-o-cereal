@@ -1,3 +1,5 @@
+{% load cart_template_tag %}
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,10 +35,11 @@
         {% if user.is_superuser %}
         <li><a href=" {% url 'feedback' %}" class="link-bar">Feedback</a></li>
         {% endif %}
-        {% comment %}<li><a class="link-bar" href="{% url 'cart' %}">Cart</a></li> {% endcomment %}
+        <li><a class="link-bar" href="{% url 'cart-index' %}">Cart</a></li>
+        <span class="badge red z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
         {% if request.get_full_path == "/" or request.get_full_path == "/cereals/" %}
         <div class="input-group">
-            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.." />
+            <input type="search" class="form-control" id="search-box" placeholder="search here.." />
             <div class="input-group-btn">
                 <button type="submit" id="search-btn" class="btn btn-default">Search</button>
             </div>
