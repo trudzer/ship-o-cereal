@@ -17,7 +17,11 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <orderEntry type="jdk" jdkName="Python 3.8 (shipocereal)" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+>>>>>>> Stashed changes
 =======
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
 >>>>>>> Stashed changes
