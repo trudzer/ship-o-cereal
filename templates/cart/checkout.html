@@ -1,68 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-  <main >
-    <div class="container wow fadeIn">
-      <h2 class="my-5 h2 text-center">Checkout form</h2>
-      <div class="row">
-        <div class="col-md-8 mb-4">
-          <div class="card">
-            <form method="POST" class="card-body">
-              {% csrf_token %}
-
-              <h3>Shipping address</h3>
-
-              <div class='hideable_shipping_form'>
-
-                <div class="md-form mb-5">
-                  <input type='text' placeholder='Full name' id='full_name' name='full_name' class='form-control' />
-                </div>
-
-                <div class="md-form mb-5">
-                  <input type='text' placeholder='Street 123' id='shipping_address' name='shipping_address' class='form-control' />
-                </div>
-
-                <div class="md-form mb-5">
-                  <input type='text' placeholder='House number' id='house_number' name='house_number' class='form-control' />
-                </div>
-                <div class="md-form mb-5">
-                  <input type='text' placeholder='City' id='city' name='city' class='form-control' />
-                </div>
-
-                <div class="row">
-                  <div class="col-lg-4 col-md-12 mb-4">
-                    <label for="country">Country</label>
-                    {{ form.shipping_country }}
-                    <div class="invalid-feedback">
-                      Please select a valid country.
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-4">
-                    <label for="shipping_zip">Postal code</label>
-                    <input type='text' placeholder='Postal code' id='shipping_postal' name='shipping_postal' class='form-control' />
-                    <div class="invalid-feedback">
-                      Postal code required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr>
-
-              <hr class="mb-4">
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-
-            </form>
-
-          </div>
-
-        </div>
-
-        <div class="col-md-4 mb-4">
-         {% comment %} {% include "order_snippet.html" %} {% endcomment %}
-        </div>
-
-      </div>
-
-    </div>
-  </main>
-
-{% endblock content %}
+    <form class="form form-horizontal" action="{% url 'checkout' %}" method="post">
+        {% csrf_token %}
+        <h1 class="red">Shipping Address</h1>
+        {{ form }}
+        <a href="{% url 'cart-index' %}" class="btn btn-primary pull-left" style="clear:both; margin: 10px 0">Back to cart</a>
+        <input type="submit" value="Continue to Checkout" class="btn btn-primary float-right" style="clear:both; margin: 10px 0"/>
+    </form>
+    <p>Copyright © 2021 Ship O'Cereal</p>
+{% endblock %}
