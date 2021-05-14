@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'contact_form.apps.ContactFormConfig',
     'cart.apps.CartConfig',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/user/login'
 LOGIN_REDIRECT_URL = '/'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51IqzhLEi4iZpiAj5tN51zOyrKQj5qA7dzI61uJgXq0RLYhfiS5OYavpFyOj2RWzhjt3BaxjykSo1yv3eNYoa8K8G008EnL5WxG'
+STRIPE_SECRET_KEY = 'sk_test_51IqzhLEi4iZpiAj5QZyEHs9jp44UUAbgHrq11LWjk7Zzc26RWeKK7cDdoXMMoLFDPoWpxCJ0ttK98ONDTbuetkS600eKWoBHnD'

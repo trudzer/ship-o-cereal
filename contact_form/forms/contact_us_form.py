@@ -6,7 +6,7 @@ class ContactUsForm(ModelForm):
         exclude = ['id']
         model = ContactUs
         widgets = {
-            'name': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'email': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'message': widgets.TextInput(attrs={'class': 'form-control message'})
+            'name': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Full name' }),
+            'email': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Email' }),
+            'message': widgets.TextInput(attrs={'class': 'form-control message', 'placeholder': 'Message' })
         }

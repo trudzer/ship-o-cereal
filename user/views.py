@@ -1,6 +1,13 @@
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import ObjectDoesNotExist
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.views import View
 
+from cart.models import Order, OrderItem
+from cereal.models import Cereal
 from user.forms.profile_form import ProfileForm
 from user.models import Profile
 
@@ -25,6 +32,7 @@ def profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
+            messages.info(request, "Profile updated")
             return redirect('profile')
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
