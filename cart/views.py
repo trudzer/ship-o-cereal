@@ -220,9 +220,7 @@ class PaymentView(View):
             order.payment = payment
             order.save()
 
-
-            messages.success(self.request, "Your order was successful!")
-            return redirect("/")
+            return render(self.request, "cart/confirmation.html")
 
         except stripe.error.CardError as e:
             body = e.json_body
@@ -261,3 +259,6 @@ class PaymentView(View):
             # Something else happened, completely unrelated to Stripe
             messages.error(self.request, "A serious error. We have been notified.")
             return redirect("/")
+
+def confirmation(request):
+    return render(request, 'cart/confirmation.html')
