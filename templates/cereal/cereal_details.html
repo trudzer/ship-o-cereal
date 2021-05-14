@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+    {% csrf_token %}
     <h1>{{ cereal.name }}</h1>
     <p>{{ cereal.description }}</p>
     <p>${{ cereal.price }}</p>

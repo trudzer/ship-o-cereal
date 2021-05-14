@@ -118,64 +118,18 @@ class Cart_View(LoginRequiredMixin, View):
         return render(self.request, 'cart/cart.html')
 
 
-class CheckoutView(View):
-    def get(self, *args, **kwargs):
-        try:
-            order = Order.objects.get(user=self.request.user, ordered=False)
-            form = BillingAddressForm()
-            context = {
-                'form': form
-            }
-            return render(self.request, 'cart/checkout.html', context)
-        except ObjectDoesNotExist:
-            messages.error(self.request, "You do not have an order")
-            return redirect("/")
-
-    def post(self, *args, **kwargs):
-        form = BillingAddressForm(self.request.POST or None)
-        try:
-            order = Order.objects.get(user=self.request.user, ordered=False)
-            billing_address = BillingAddress.objects.get(user=self.request.user)
-            if form.is_valid():
-                full_name = form.cleaned_data.get('full_name')
-                street_name = form.cleaned_data.get('street_name')
-                house_number = form.cleaned_data.get('house_number')
-                city = form.cleaned_data.get('city')
-                country = form.cleaned_data.get('country')
-                postal_code = form.cleaned_data.get('postal_code')
-                billing_address.delete()
-                billing_address = BillingAddress(
-                    user=self.request.user,
-                    full_name=full_name,
-                    street_name=street_name,
-                    house_number=house_number,
-                    city=city,
-                    country=country,
-                    postal_code=postal_code
-                )
-                billing_address.save()
-                order.billing_address = billing_address
-                order.save()
-                return redirect('/cart/payment')
-            messages.warning(self.request, "Failed checkout")
-            return redirect('/cart/checkout')
-        except ObjectDoesNotExist:
-            messages.error(self.request, "You do not have an active order")
-            return redirect("/")
-
-
 def checkout_view(request):
     if request.method == 'POST':
         form = BillingAddressForm(data=request.POST)
         try:
             order = Order.objects.get(user=request.user, ordered=False)
-            if form.is_valid():
-                billing_address = form.save(commit=False)
-                billing_address.user = request.user
-                billing_address.save()
-                order.billing_address = billing_address
-                order.save()
-                return redirect('/cart/payment.html')
+            billing_address = form.save(commit=False)
+            billing_address.user = request.user
+            billing_address.save()
+            order.billing_address = billing_address
+            order.save()
+            billing_address.delete()
+            return redirect('/cart/payment')
             messages.warning(request, "Failed checkout")
             return redirect('/cart/checkout')
         except ObjectDoesNotExist:
